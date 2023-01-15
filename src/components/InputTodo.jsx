@@ -1,4 +1,9 @@
-const InputTodo = ({todoText, setTodoText, onClickAdd}) => {
+const InputTodo = ({
+  todoText,
+  setTodoText,
+  onClickAdd,
+  disabled
+}) => {
 
     const style = {
       padding: "8px",
@@ -8,13 +13,19 @@ const InputTodo = ({todoText, setTodoText, onClickAdd}) => {
     return (
       <div className="area">
         <input
+          disabled={disabled}
           type="text"
           placeholder="TODO を入力"
           value={todoText}
           onChange={(e) => setTodoText(e.target.value)}
           style={style}
         />
-        <button onClick={onClickAdd}>追加</button>
+        <button
+          disabled={disabled}
+          onClick={onClickAdd}
+        >
+          追加
+        </button>
       </div>
     )
 }
