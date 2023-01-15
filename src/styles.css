@@ -21,13 +21,7 @@ body {
   align-items: center;
   gap: 7px;
 }
-.input-area {
-}
-.input-area input {
-  padding: 8px;
-  width: calc(100% - 5rem);
-  outline: none;
-}
+
 .incomplete-area {
   background-color: aliceblue;
 }
